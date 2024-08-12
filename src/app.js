@@ -44,8 +44,10 @@ function generateCard() {
   suitCardBottom.innerHTML = suits[randomSuits];
 
   if (suits[randomSuits] == "♦" || suits[randomSuits] == "♥") {
-    document.querySelector(".card").style.color = "red";
+    document.querySelector("#cornerTop").style.color = "red";
+    document.querySelector("#cornerBottom").style.color = "red";
   } else {
-    document.querySelector(".card").style.color = "black";
+    document.querySelector("#cornerTop").style.color = "black";
+    document.querySelector("#cornerBottom").style.color = "black";
   }
 }
