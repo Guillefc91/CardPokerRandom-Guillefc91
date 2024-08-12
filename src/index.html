@@ -1,29 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <title>Carta de Póker</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: green !important;
+      }
+
+      .card {
+        width: 240px;
+        height: 360px;
+        border-radius: 10px;
+        position: relative;
+        font-family: "Arial", sans-serif;
+        text-align: center;
+      }
+
+      .card .corner {
+        position: absolute;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .card .top-left {
+        top: 10px;
+        left: 10px;
+      }
+
+      .card .bottom-right {
+        bottom: 10px;
+        right: 10px;
+      }
+
+      .card .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 48px;
+      }
+
+      #changeCard {
+        margin-left: 80px;
+      }
+    </style>
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
+    <div class="card">
+      <div id="cornerTop" class="corner top-left"></div>
+      <div id="centerCard" class="center"></div>
+      <div id="cornerBottom" class="corner bottom-right"></div>
     </div>
+    <button id="changeCard" type="button" class="btn btn-info">
+      Change Card
+    </button>
   </body>
 </html>
